@@ -15,7 +15,8 @@ source:
   sha256: 72f430013c5a8f16ba17baf3a7c1cbebddb7eb8731a55b47f2b19c67278f399e
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,14 +24,15 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-mass
     - r-mc2d
     - r-plyr
     - r-reshape
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
@@ -38,7 +40,6 @@ requirements:
     - r-mc2d
     - r-plyr
     - r-reshape
-    - libgcc  # [not win]
 
 test:
   commands:
