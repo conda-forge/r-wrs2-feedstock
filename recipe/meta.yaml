@@ -1,4 +1,4 @@
-{% set version = "0.10-0" %}
+{% set version = "1.0-0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/WRS2_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/WRS2/WRS2_{{ version }}.tar.gz
-  sha256: 72f430013c5a8f16ba17baf3a7c1cbebddb7eb8731a55b47f2b19c67278f399e
+  sha256: 1ac4b8292f142a8e9dde7755ce3734835f33eb0f379d5370acc581b720a3a7ab
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
