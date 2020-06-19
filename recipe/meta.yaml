@@ -1,4 +1,4 @@
-{% set version = '1.0-0' %}
+{% set version = "1.1-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WRS2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WRS2/WRS2_{{ version }}.tar.gz
-  sha256: 1ac4b8292f142a8e9dde7755ce3734835f33eb0f379d5370acc581b720a3a7ab
+  sha256: a7ea18ce33486c0fb741066cd426c00997e214d429c03ce43fb64cbd6dd178da
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,12 +43,9 @@ test:
 about:
   home: https://r-forge.r-project.org/projects/psychor/
   license: GPL-3
-  summary: A collection of robust statistical methods based on Wilcox' WRS functions. It implements
-    robust t-tests (independent and dependent samples), robust ANOVA (including between-within
-    subject designs), quantile ANOVA, robust correlation, robust mediation, and nonparametric
-    ANCOVA models based on robust location measures.
+  summary: A collection of robust statistical methods based on Wilcox' WRS functions. It implements robust t-tests (independent and dependent samples), robust ANOVA (including between-within subject designs), quantile ANOVA, robust correlation, robust mediation, and nonparametric ANCOVA models based on robust location measures.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
