@@ -1,4 +1,4 @@
-{% set version = "1.1-1" %}
+{% set version = "1.1-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WRS2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WRS2/WRS2_{{ version }}.tar.gz
-  sha256: 50c461917ddd4c0f83ef79f072dd5aa9ecaf799f757b9534d64b7146be20544b
+  sha256: d89dcd9cc42317150f900d9bd9a2d95e0500bb959832c8e28b23c5f2cf971083
 
 build:
   merge_build_host: true  # [win]
