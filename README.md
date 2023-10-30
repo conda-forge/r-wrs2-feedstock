@@ -3,6 +3,7 @@ About r-wrs2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-wrs2-feedstock/blob/main/LICENSE.txt)
 
+
 About r-wrs2
 ------------
 
@@ -11,6 +12,7 @@ Home: https://r-forge.r-project.org/projects/psychor/
 Package license: GPL-3.0-only
 
 Summary: A collection of robust statistical methods based on Wilcox' WRS functions. It implements robust t-tests (independent and dependent samples), robust ANOVA (including between-within subject designs), quantile ANOVA, robust correlation, robust mediation, and nonparametric ANCOVA models based on robust location measures.
+
 About r-wrs2
 ------------
 
