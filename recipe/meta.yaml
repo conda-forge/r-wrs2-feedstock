@@ -1,4 +1,4 @@
-{% set version = "1.1-6" %}
+{% set version = "1.1-7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WRS2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WRS2/WRS2_{{ version }}.tar.gz
-  sha256: 53142b7252f1b4e6bbc74c0fa85dc2bd6209a65adec1ff5d7f0b06ff08d556f3
+  sha256: 4720977afe88c5651270d1c566e5bd65906ba2fd8fa5dfe3a4adc9bf1d5de38f
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
